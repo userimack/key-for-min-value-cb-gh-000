@@ -3,7 +3,8 @@
 
 def key_for_min_value(name_hash)
   min_value = name_hash.map do {|key, value| value}.sort[0]
-  name_hash.map do |key, value| 
+  name_hash.each do |key, value| 
     min_value = value if value < min_value
-    
+  end 
+  min_value
 end
